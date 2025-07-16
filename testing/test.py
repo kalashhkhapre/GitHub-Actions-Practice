@@ -1,7 +1,8 @@
-# tests/test_calculator.py
 
-import pytest
-from src.python_app import add, subtract, multiply, divide
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+from python_app import add, subtract, multiply, divide
 
 def test_add():
     assert add(2, 3) == 5
