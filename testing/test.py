@@ -1,4 +1,3 @@
-
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
@@ -15,3 +14,10 @@ def test_multiply():
 
 def test_divide():
     assert divide(10, 2) == 5
+
+def test_divide_by_zero():
+    try:
+        divide(5, 0)
+        assert False, "Expected ValueError"
+    except ValueError:
+        assert True
